@@ -105,7 +105,7 @@ jobs:
           path: |
             ./build
             ./app/build/
-          key: shared-build-cache-${{ hashFiles('**/*.gradle*') }}
+          key: darwin-shared-build-cache-${{ hashFiles('**/*.gradle*') }}
 
       - name: Run instrumentation tests
         uses: reactivecircus/android-emulator-runner@v2
