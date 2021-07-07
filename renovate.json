@@ -1,5 +1,16 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "group:allNonMajor"
+  ],
+  "labels": [
+    "maintenance"
+  ],
+  "automergeType": "branch",
+  "automerge": true,
+  "schedule": [
+    "before 5am on Monday"
+  ],
+  "packageRules": [
   ]
 }
