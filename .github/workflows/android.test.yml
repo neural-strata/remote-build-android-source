@@ -24,14 +24,14 @@ jobs:
           distribution: 'adopt'
           java-version: 11
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: cache-gradle-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ./build
@@ -71,14 +71,14 @@ jobs:
           distribution: 'adopt'
           java-version: 11
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: darwin-gradle-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             /usr/local/lib/android/sdk/build-tools/30.0.3
@@ -93,14 +93,14 @@ jobs:
             /Users/runner/Library/Android/sdk/tools
           key: darwin-build-tools-android-sdk-${{ matrix.api-level }}-${{ hashFiles('**/.github/workflows/*android.*.yml') }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             /usr/local/lib/android/sdk/system-images
             /Users/runner/Library/Android/sdk/system-images
           key: darwin-system-images-android-sdk-${{ matrix.api-level }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             ./build
